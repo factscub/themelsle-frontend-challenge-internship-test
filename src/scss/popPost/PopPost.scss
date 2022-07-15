@@ -1,0 +1,89 @@
+@import '../extenders';
+
+$close: #b7b7ba;
+
+.outer-container {
+    @extend %center;
+    min-width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 44;
+    // overflow: scroll;  /// optional
+    backdrop-filter: blur(3px);
+
+    .inner-container {
+        width: 40%;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+        font-family: $font;
+        background-color: white;
+        border-radius: 5px;
+    
+        .close {
+            @extend %center;
+            height: 50px;
+            padding: 0px 20px;
+            justify-content: flex-end;
+            color: $mainTextColor;
+            span {
+                font-weight: 700;
+                font-size: 40px;
+                font-weight: 500;
+                transition: 0.3s;
+                cursor: pointer;
+            }
+        }
+
+        .thumbnail {
+            @extend %center;
+            margin-bottom: 18px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .text-container {
+            padding: 0% 5%;
+
+            .heading {
+                @extend %header;
+            }
+
+            .main-text {
+                @extend %mainText;
+                padding: 20px 0px;
+            }
+        }
+
+        .avatar-details-container {
+            display: flex;
+            @extend %details;
+            align-items: center;
+
+            .avatar {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .details {
+                margin: 0px 15px;
+            }
+        }
+    }
+
+    @media(max-width:850px) {
+        .inner-container {
+            width: 70%;
+
+        }
+    }
+
+}

@@ -1,0 +1,132 @@
+@import '../extenders';
+
+$circle2: orange;
+$circle1: rgb(77, 185, 234);
+
+.container {
+    position: relative;
+    font-family: $font;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 120px 0px;
+
+    .row {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: auto;
+
+        .card {
+            width: 40%;
+            height: inherit;
+            margin: 12px;
+            border-radius: 5px;
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+
+            .thumbnail {
+                position: relative;
+                width: 100%;
+                display: flex;
+                height: 200px;
+                cursor: pointer;
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                    overflow: hidden;
+                    margin-top: -80px; ////optional
+                }
+
+                .overlay {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    height: 100%;
+                    width: 100%;
+                    opacity: 1;
+                    transition: .5s ease;
+                    @extend %center;
+
+                    .text {
+                        color: white;
+                        font-weight: 700;
+                        opacity: 0;
+                        font-size: 20px;
+
+                    }
+                }
+
+            }
+
+            .thumbnail:hover .overlay {
+                backdrop-filter: blur(1.5px);
+            }
+
+            .thumbnail:hover .overlay .text {
+                opacity: 1;
+                transition: .5s ease;
+            }
+
+
+            .text-container {
+                padding: 0% 5%;
+
+                .circles {
+                    height: 15px;
+                    padding: 15px 0px;
+
+                    span {
+                        display: inline-block;
+                        width: 12px;
+                        height: 12px;
+                        border-radius: 50%;
+                        margin-right: 5px;
+                    }
+
+                    span:nth-child(1) {
+                        background-color: $circle1;
+                    }
+
+                    span:nth-child(2) {
+                        background-color: $circle2;
+                    }
+                }
+
+                .heading {
+                    @extend %header;
+                    cursor: pointer;
+                }
+
+                .main-text {
+                    @extend %mainText;
+                    height: inherit;
+                }
+            }
+
+            .author-date {
+                @extend %details;
+                @extend %center;
+                justify-content: space-between;
+
+            }
+        }
+
+    }
+
+}
+
+@media (max-width:505px) {
+    .container {
+        .row {
+            .card {
+                width: 100%;
+            }
+        }
+    }
+}

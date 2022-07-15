@@ -1,9 +1,10 @@
-import './App.css';
+import './scss/app/App.css';
+import Posts from './component/posts/Posts';
 
 function App() {
   return (
     <div className="App">
-     ji
+      <Posts/>
     </div>
   );
 }

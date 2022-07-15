@@ -1,0 +1,89 @@
+.outer-container .inner-container .avatar-details-container {
+  font-weight: 700;
+  font-size: 13px;
+  color: #b7b7ba;
+  padding: 0px 5% 20px 5%;
+}
+
+.outer-container .inner-container .thumbnail, .outer-container .inner-container .close, .outer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.outer-container .inner-container .text-container .heading {
+  display: inline-block;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.outer-container .inner-container .text-container .main-text {
+  font-size: 13px;
+  font-weight: 400;
+  padding: 30px 0px;
+  color: #b7b7ba;
+}
+
+.outer-container {
+  min-width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 44;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+}
+.outer-container .inner-container {
+  width: 40%;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  font-family: "Lato", sans-serif;
+  background-color: white;
+  border-radius: 5px;
+}
+.outer-container .inner-container .close {
+  height: 50px;
+  padding: 0px 20px;
+  justify-content: flex-end;
+  color: #b7b7ba;
+}
+.outer-container .inner-container .close span {
+  font-weight: 700;
+  font-size: 40px;
+  font-weight: 500;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.outer-container .inner-container .thumbnail {
+  margin-bottom: 18px;
+}
+.outer-container .inner-container .thumbnail img {
+  width: 100%;
+}
+.outer-container .inner-container .text-container {
+  padding: 0% 5%;
+}
+.outer-container .inner-container .text-container .main-text {
+  padding: 20px 0px;
+}
+.outer-container .inner-container .avatar-details-container {
+  display: flex;
+  align-items: center;
+}
+.outer-container .inner-container .avatar-details-container .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.outer-container .inner-container .avatar-details-container .avatar img {
+  width: 100%;
+}
+.outer-container .inner-container .avatar-details-container .details {
+  margin: 0px 15px;
+}
+@media (max-width: 850px) {
+  .outer-container .inner-container {
+    width: 70%;
+  }
+}/*# sourceMappingURL=PopPost.css.map */

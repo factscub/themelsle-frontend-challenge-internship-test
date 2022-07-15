@@ -1,0 +1,124 @@
+.container .row .card .author-date {
+  font-weight: 700;
+  font-size: 13px;
+  color: #b7b7ba;
+  padding: 0px 5% 20px 5%;
+}
+
+.container .row .card .author-date, .container .row .card .thumbnail .overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .row .card .text-container .heading {
+  display: inline-block;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.container .row .card .text-container .main-text {
+  font-size: 13px;
+  font-weight: 400;
+  padding: 30px 0px;
+  color: #b7b7ba;
+}
+
+.container {
+  position: relative;
+  font-family: "Lato", sans-serif;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 120px 0px;
+}
+.container .row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+}
+.container .row .card {
+  width: 40%;
+  height: inherit;
+  margin: 12px;
+  border-radius: 5px;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+.container .row .card .thumbnail {
+  position: relative;
+  width: 100%;
+  display: flex;
+  height: 200px;
+  cursor: pointer;
+}
+.container .row .card .thumbnail img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  margin-top: -80px;
+}
+.container .row .card .thumbnail .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  transition: 0.5s ease;
+}
+.container .row .card .thumbnail .overlay .text {
+  color: white;
+  font-weight: 700;
+  opacity: 0;
+  font-size: 20px;
+}
+.container .row .card .thumbnail:hover .overlay {
+  -webkit-backdrop-filter: blur(1.5px);
+          backdrop-filter: blur(1.5px);
+}
+.container .row .card .thumbnail:hover .overlay .text {
+  opacity: 1;
+  transition: 0.5s ease;
+}
+.container .row .card .text-container {
+  padding: 0% 5%;
+}
+.container .row .card .text-container .circles {
+  height: 15px;
+  padding: 15px 0px;
+}
+.container .row .card .text-container .circles span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.container .row .card .text-container .circles span:nth-child(1) {
+  background-color: rgb(77, 185, 234);
+}
+.container .row .card .text-container .circles span:nth-child(2) {
+  background-color: orange;
+}
+.container .row .card .text-container .heading {
+  cursor: pointer;
+}
+.container .row .card .text-container .main-text {
+  height: inherit;
+}
+.container .row .card .author-date {
+  justify-content: space-between;
+}
+
+@media (max-width: 505px) {
+  .container .row .card {
+    width: 100%;
+  }
+}/*# sourceMappingURL=Posts.css.map */

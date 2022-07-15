@@ -1,0 +1,30 @@
+$mainTextColor: #b7b7ba;
+$font : 'Lato',sans-serif;
+$DetailsColor: #b7b7ba;
+$bgColor: white;
+
+%details{
+    font-weight: 700;
+    font-size: 13px;
+    color: $DetailsColor;
+    padding: 0px 5% 20px 5%;
+}
+%center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+%header {
+    display: inline-block;
+    font-weight: 900;
+    font-size: 20px;
+
+}
+
+%mainText {
+    font-size: 13px;
+    font-weight: 400;
+    padding: 30px 0px;
+    color: $mainTextColor;
+}
